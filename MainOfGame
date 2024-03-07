@@ -1,0 +1,26 @@
+mport board.Board;
+import player.PLAY;
+import game.Game;
+public class Player {
+    public Player(){
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println("TIC TAC TOE");
+        Board b = new Board(3,'-');
+        b.setDefaultSymbol('_');
+        
+
+        PLAY p1 = new PLAY();
+        PLAY p2 = new PLAY();
+        p1.setInfoOfplayer(19,'X', "ravi", "karnataka", "9148055615");
+        p1.getInfo();
+        System.out.println();
+        p2.setInfoOfplayer(20,'O', "ramu", "karnataka123", "8749080088");
+        p2.getInfo();
+        
+        Game game = new Game(new PLAY[] {p1, p2}, b);
+        game.play();
+    }
+}
